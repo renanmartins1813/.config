@@ -5,7 +5,7 @@ vim.g.have_nerd_font = true
 vim.o.softtabstop = 4 -- How many 'spaces' are applied when pressing Tab
 vim.o.shiftwidth = 4 -- Amount of indent with << and >> (How many 'spaces' << and >> moves)
 vim.opt.tabstop = 4 -- How many 'spaces' are show per Tab
-vim.o.expandtab = true -- convert tabs to spaces
+vim.o.expandtab = false -- convert tabs to spaces
 
 vim.opt.smarttab = true
 vim.opt.smartindent = true
@@ -89,6 +89,18 @@ vim.opt.scrolloff = 25
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })

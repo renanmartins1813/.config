@@ -37,3 +37,8 @@ require("lazy").setup({
 })
 
 require("config.keymaps")
+
+-- auto commands after neovim startup
+
+-- Show commands using Showkeys plugins
+vim.cmd("ShowkeysToggle");
