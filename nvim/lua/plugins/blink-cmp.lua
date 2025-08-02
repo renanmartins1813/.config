@@ -88,7 +88,7 @@ return { -- Autocompletion
 		},
 
 		sources = {
-			default = { "lsp", "path", "snippets", "lazydev" },
+			default = { "lsp", "path", "snippets", "lazydev", "buffer" },
 			providers = {
 				lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
 			},
@@ -107,5 +107,11 @@ return { -- Autocompletion
 
 		-- Shows a signature help window while you type arguments for a function
 		signature = { enabled = true },
+
+		-- Autoshow completion using the cmdline - :commmand line :
+		cmdline = {
+			keymap = { preset = "inherit" },
+			completion = { menu = { auto_show = true } },
+		},
 	},
 }
