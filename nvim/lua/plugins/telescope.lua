@@ -20,7 +20,17 @@ return {
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = true },
+		{ 'nvim-tree/nvim-web-devicons', enabled = true },
+	{
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+},
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -64,6 +74,9 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'projects')
+		--telescope.load_extension("projects")
+
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -78,6 +91,8 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+
+		vim.keymap.set("n", "<leader>sp", "<cmd>Telescope projects<CR>", { desc = "Find exising Projects.nvim" })
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
