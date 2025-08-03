@@ -249,7 +249,6 @@ return {
 					showSuggestionsAsSnippets = true,
 				},
 			},
-			emmet_ls = {},
 			eslint = {},
 			gopls = {},
 			harper_ls = {},
