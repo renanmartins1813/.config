@@ -233,16 +233,33 @@ return {
 				},
 			},
 
+			angularls = {},
+			bashls = {},
+			clangd = {},
 			css_variables = {},
 			cssls = {},
-			emmet_language_server = {},
+			cssmodules_ls = {},
+			docker_compose_language_service = {},
+			dockerls = {},
+			emmet_language_server = {
+				init_options = {
+					--- @type "always" | "never" Defaults to `"always"`
+					showExpandedAbbreviation = "always",
+					--- @type boolean Defaults to `false`
+					showSuggestionsAsSnippets = true,
+				},
+			},
+			emmet_ls = {},
 			eslint = {},
 			gopls = {},
 			harper_ls = {},
 			html = {},
+			htmx = {},
 			intelephense = {},
 			jsonls = {},
+			marksman = {},
 			phpactor = {},
+			shellcheck = {},
 			somesass_ls = {},
 			tailwindcss = {},
 		}
@@ -268,15 +285,15 @@ return {
 			"cspell",
 			"goimports-reviser",
 			"luacheck",
-			"php-debug-adapter",
 			"phpcbf",
 			"phpcs",
 			"phpstan",
+			"prettierd",
 			"rustywind",
 			"selene",
-			"shellcheck",
 			"shfmt",
 			"ts-standard",
+
 			--'ts_ls',
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
