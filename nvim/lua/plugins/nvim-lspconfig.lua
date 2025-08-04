@@ -242,11 +242,42 @@ return {
 			docker_compose_language_service = {},
 			dockerls = {},
 			emmet_language_server = {
-				init_options = {
-					--- @type "always" | "never" Defaults to `"always"`
-					showExpandedAbbreviation = "always",
-					--- @type boolean Defaults to `false`
-					showSuggestionsAsSnippets = true,
+				filetypes = {
+					"html",
+					"css",
+					"scss",
+					"sass",
+					"less",
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"vue",
+					"svelte",
+				},
+				settings = {
+					emmet = {
+						includeLanguages = {
+							["html"] = "html",
+							["css"] = "css",
+							["scss"] = "scss",
+							["sass"] = "sass",
+							["less"] = "less",
+							["javascript"] = "javascriptreact",
+							["typescript"] = "typescriptreact",
+							["vue"] = "vue",
+							["svelte"] = "svelte",
+						},
+						showExpandedAbbreviation = "always",
+						showAbbreviationSuggestions = true,
+						syntaxProfiles = {
+							["html"] = "html",
+							["css"] = "css",
+							["scss"] = "scss",
+							["sass"] = "sass",
+							["less"] = "less",
+						},
+					},
 				},
 			},
 			eslint = {},
