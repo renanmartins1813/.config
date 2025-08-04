@@ -242,40 +242,24 @@ return {
 			docker_compose_language_service = {},
 			dockerls = {},
 			emmet_language_server = {
-				filetypes = {
-					"html",
-					"css",
-					"scss",
-					"sass",
-					"less",
-					"javascript",
-					"javascriptreact",
-					"typescript",
-					"typescriptreact",
-					"vue",
-					"svelte",
-				},
-				settings = {
-					emmet = {
-						includeLanguages = {
-							["html"] = "html",
-							["css"] = "css",
-							["scss"] = "scss",
-							["sass"] = "sass",
-							["less"] = "less",
-							["javascript"] = "javascriptreact",
-							["typescript"] = "typescriptreact",
-							["vue"] = "vue",
-							["svelte"] = "svelte",
-						},
-						showExpandedAbbreviation = "always",
-						showAbbreviationSuggestions = true,
-						syntaxProfiles = {
-							["html"] = "html",
-							["css"] = "css",
-							["scss"] = "scss",
-							["sass"] = "sass",
-							["less"] = "less",
+				{
+					filetypes = {
+						"html",
+						"css",
+						"scss",
+						"sass",
+						"less",
+						"javascript",
+						"javascriptreact",
+						"typescript",
+						"typescriptreact",
+						"vue",
+						"svelte",
+					},
+					settings = {
+						emmet = {
+							showExpandedAbbreviation = "always",
+							showAbbreviationSuggestions = true,
 						},
 					},
 				},
