@@ -233,7 +233,7 @@ return {
 				},
 			},
 
-			angularls = {},
+			-- angularls = {},
 			bashls = {},
 			clangd = {},
 			css_variables = {},
@@ -267,7 +267,7 @@ return {
 			gopls = {},
 			harper_ls = {},
 			html = {},
-			htmx = {},
+			-- htmx = {},
 			intelephense = {},
 			jsonls = {},
 			marksman = {},
