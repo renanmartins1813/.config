@@ -254,6 +254,7 @@ return {
 					"typescriptreact",
 					"vue",
 					"svelte",
+					"php",
 				},
 				settings = {
 					emmet = {
