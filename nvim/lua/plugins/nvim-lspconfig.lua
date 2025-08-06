@@ -233,7 +233,7 @@ return {
 				},
 			},
 
-			-- angularls = {},
+			angularls = {},
 			bashls = {},
 			clangd = {},
 			css_variables = {},
