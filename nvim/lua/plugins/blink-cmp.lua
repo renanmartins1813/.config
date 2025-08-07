@@ -1,4 +1,4 @@
-return { -- Autocompletion
+return { -- Autoc0ompletion
 	{
 		"saghen/blink.compat",
 		-- use v2.* for blink.cmp v1.*
@@ -94,7 +94,8 @@ return { -- Autocompletion
 			completion = {
 				-- By default, you may press `<c-space>` to show the documentation.
 				-- Optionally, set `auto_show = true` to show the documentation after a delay.
-				documentation = { auto_show = true, auto_show_delay_ms = 300 },
+				documentation = { auto_show = true, auto_show_delay_ms = 0 },
+				ghost_text = { enabled = true },
 			},
 
 			sources = {
