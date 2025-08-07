@@ -2,10 +2,10 @@
 vim.g.have_nerd_font = true
 
 -- Set swift width = 4    |    default it 2
-vim.o.softtabstop = 2 -- How many 'spaces' are applied when pressing Tab
-vim.o.shiftwidth = 2 -- Amount of indent with << and >> (How many 'spaces' << and >> moves)
-vim.opt.tabstop = 2 -- How many 'spaces' are show per Tab
-vim.o.expandtab = true -- convert tabs to spaces
+vim.o.softtabstop = 4 -- How many 'spaces' are applied when pressing Tab
+vim.o.shiftwidth = 4 -- Amount of indent with << and >> (How many 'spaces' << and >> moves)
+vim.opt.tabstop = 4 -- How many 'spaces' are show per Tab
+vim.o.expandtab = false -- convert tabs to spaces
 
 vim.opt.smarttab = true
 vim.opt.smartindent = true
